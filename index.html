@@ -50,6 +50,31 @@ h1 em:after{content:"";position:absolute;height:8px;left:0;right:0;bottom:1px;ba
 footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong{font-size:20px}footer span{display:block;color:#cbbfb3;margin-top:5px;font-size:14px}footer p{font-size:11px;color:#82776e;margin-top:26px}
 @media(max-width:430px){h1{font-size:43px}.hero{padding-top:26px}.stamp{width:70px;height:70px}.hero:before{font-size:66px;right:-42px}.lab-card{min-height:220px;padding:18px}.lab-card h3{font-size:20px}}
 </style>
+
+<style>
+/* V7 — 本本手帳 / 實驗紀錄語言 */
+.pill{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;letter-spacing:.01em}
+.pill:nth-child(4n+1){background:#fffaf2}.pill:nth-child(4n+2){background:#e7e8dc}
+.pill:nth-child(4n+3){background:#f0ddd3}.pill:nth-child(4n){background:#eadbc4}
+.logno{font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;color:var(--caramel);margin-bottom:9px}
+.logtxt{font-size:13px;line-height:1.6;color:var(--muted);margin:8px 0 12px}
+.prog{position:relative;transition:transform .18s ease,box-shadow .18s ease}
+.prog:active,.lab-card:active,.link:active,.pill:active{transform:scale(.985)}
+.prog.featured{background:#eee3cf;border-style:dashed}
+.prog.featured:after{content:"KEEP GOING";position:absolute;right:16px;bottom:-9px;background:var(--sage);padding:5px 8px;font:800 9px ui-monospace,SFMono-Regular,Menlo,monospace;transform:rotate(-2deg)}
+.lab-card{transition:transform .18s ease,box-shadow .18s ease}
+.lab-card:hover{transform:translateY(-3px);box-shadow:0 12px 24px #49351f13}
+.section-title .eyebrow:before{content:"✦ ";font-size:9px}
+.start-box .eyebrow:before{content:"→ "}
+.hero .kicker:before{content:"✦"}
+@media(prefers-reduced-motion:no-preference){
+ .photo{animation:floaty 5s ease-in-out infinite}
+ .stamp{animation:stampy 7s ease-in-out infinite}
+ @keyframes floaty{50%{transform:rotate(1deg) translateY(-5px)}}
+ @keyframes stampy{50%{transform:rotate(3deg) translateY(3px)}}
+}
+</style>
+
 </head>
 <body><main>
 <section class="hero">
@@ -60,20 +85,20 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
   <p class="hook">上班、養小孩、愛買東西、學 AI、做自媒體、經營購物群。</p>
   <p class="sub">我想實驗看看：一個普通上班族，能不能靠每天累積一點點，慢慢換回更多選擇？</p>
   <a class="cta" href="#lab">進入本本實驗室 ↓</a>
-  <div class="micro">NO PERFECT PLAN · JUST KEEP EXPERIMENTING</div>
+  <div class="micro">先完成，再優化。生活也是。</div>
 </section>
 
 <section class="section">
   <div class="section-title">
-    <span class="eyebrow">MY OPEN TABS</span>
+    <span class="eyebrow">本本的生活分頁</span>
     <h2>我的生活，本來就同時開著很多分頁。</h2>
     <p>沒有哪一個身份是全部的我，全部加起來才是。</p>
   </div>
   <div class="tabs">
-    <span class="pill">💼 上班族</span><span class="pill">👩‍👧‍👦 媽媽</span>
-    <span class="pill">🛒 愛買東西</span><span class="pill">✨ 想變漂亮</span>
-    <span class="pill">💰 想多賺一點</span><span class="pill">🤖 AI 新手</span>
-    <span class="pill">📱 自媒體新手</span><span class="pill">😆 偶爾很會拖延</span>
+    <span class="pill">01 / 上班族</span><span class="pill">02 / 媽媽</span>
+    <span class="pill">03 / 愛買東西</span><span class="pill">04 / 想變漂亮</span>
+    <span class="pill">05 / 想多賺一點</span><span class="pill">06 / AI 新手</span>
+    <span class="pill">07 / 自媒體新手</span><span class="pill">08 / 偶爾很會拖延</span>
   </div>
   <div class="statement">
     <strong>所以我決定，<br>不等「準備好了」才開始。</strong>
@@ -83,7 +108,7 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
 
 <section class="section lab" id="lab">
   <div class="section-title">
-    <span class="eyebrow">BENBEN LAB</span>
+    <span class="eyebrow">本本實驗室</span>
     <h2>今天想逛哪間實驗室？</h2>
     <p>不是分類而已，每一間都是我正在真的做的事。</p>
   </div>
@@ -97,22 +122,22 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
 
 <section class="section">
   <div class="section-title">
-    <span class="eyebrow">EXPERIMENT STATUS</span>
-    <h2>本本目前實驗進度</h2>
-    <p>不是人生 KPI，是提醒自己：我真的有在往前。</p>
+    <span class="eyebrow">實驗紀錄</span>
+    <h2>本本的生活實驗紀錄</h2>
+    <p>沒有標準答案，也沒有畢業日期。只記錄：現在的我，正在往哪裡走。</p>
   </div>
   <div class="progress">
-    <div class="prog"><div class="prog-top"><span>正職上班</span><span>持續運作 ✓</span></div><div class="bar"><i style="width:100%"></i></div></div>
-    <div class="prog"><div class="prog-top"><span>媽媽模式</span><span>長期專案 ✓</span></div><div class="bar"><i style="width:100%"></i></div></div>
-    <div class="prog"><div class="prog-top"><span>自媒體養成</span><span>進行中</span></div><div class="bar"><i style="width:63%"></i></div></div>
-    <div class="prog"><div class="prog-top"><span>AI 技能解鎖</span><span>進行中</span></div><div class="bar"><i style="width:55%"></i></div></div>
-    <div class="prog"><div class="prog-top"><span>自由生活</span><span>持續實驗中…</span></div><div class="bar"><i style="width:48%"></i></div></div>
+    <div class="prog"><div class="logno">LOG 01</div><div class="prog-top"><span>正職上班</span><span>持續運作 ✓</span></div><p class="logtxt">先把現實顧好，同時替未來留一條路。</p><div class="bar"><i style="width:100%"></i></div></div>
+    <div class="prog"><div class="logno">LOG 02</div><div class="prog-top"><span>媽媽模式</span><span>長期專案 ✓</span></div><p class="logtxt">家庭不是暫停人生，而是人生本身的一部分。</p><div class="bar"><i style="width:100%"></i></div></div>
+    <div class="prog"><div class="logno">LOG 03</div><div class="prog-top"><span>自媒體養成</span><span>進行中</span></div><p class="logtxt">不等完美，先把真實的生活分享出去。</p><div class="bar"><i style="width:63%"></i></div></div>
+    <div class="prog"><div class="logno">LOG 04</div><div class="prog-top"><span>AI 技能解鎖</span><span>進行中</span></div><p class="logtxt">從完全不會開始，把工具慢慢變成自己的能力。</p><div class="bar"><i style="width:55%"></i></div></div>
+    <div class="prog featured"><div class="logno">ONGOING</div><div class="prog-top"><span>自由生活</span><span>持續實驗中…</span></div><p class="logtxt">目標不是逃離工作，是讓人生不只剩下一種選項。</p><div class="bar"><i style="width:48%"></i></div></div>
   </div>
 </section>
 
 <section class="start">
   <div class="start-box">
-    <span class="eyebrow">START HERE</span>
+    <span class="eyebrow">從這裡開始</span>
     <h2>如果你也是邊生活，<br>邊想替自己多一點選擇。</h2>
     <div class="links">
       <a class="link" href="https://www.instagram.com/JINCA1027/" target="_blank"><span>先看看本本的日常</span><small>IG ↗</small></a>
@@ -128,5 +153,5 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
   <h2>我想要的自由，<br>不是什麼都不用做。<br><span style="color:var(--caramel)">是讓自己慢慢擁有更多選擇。</span></h2>
   <p>— 李本本的自由生活實驗</p>
 </section>
-<footer><strong>李本本</strong><span>上班族的自由生活實驗</span><p>© 2026 BENBEN LAB</p></footer>
+<footer><strong>李本本</strong><span>上班族的自由生活實驗</span><p>© 2026 本本自由生活實驗室</p></footer>
 </main></body></html>
