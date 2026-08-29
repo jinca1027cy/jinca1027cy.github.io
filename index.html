@@ -1,65 +1,74 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>李本本｜上班族的自由生活實驗</title>
-  <meta name="description" content="生活、選物、學習與斜槓實驗。先認識本本，再決定要不要一起聊聊。">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f0e7">
+<title>李本本｜上班族的自由生活實驗</title>
+<meta name="description" content="生活、選物、學習、斜槓。記錄一個普通上班族，怎麼慢慢替自己增加選擇。">
+<style>
+:root{--bg:#f6f0e7;--paper:#fffaf4;--ink:#292521;--muted:#756c62;--gold:#a87925;--line:#e9ddcd;--dark:#302a25}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+main{max-width:720px;margin:auto}.hero{padding:58px 24px 42px;min-height:88svh;display:flex;flex-direction:column;justify-content:center}
+.avatar{width:124px;height:124px;border-radius:50%;object-fit:cover;object-position:center 42%;border:5px solid #fff;box-shadow:0 14px 34px #4b3d2d24;margin-bottom:26px}
+.tag,.eyebrow{font-size:12px;letter-spacing:.16em;font-weight:800;color:var(--gold);margin:0}
+h1{font-size:42px;line-height:1.12;letter-spacing:-.04em;margin:10px 0 20px}h1 span{color:var(--gold)}
+.hero .lead{font-size:17px;line-height:1.9;color:var(--muted);margin:0 0 26px}.primary{align-self:flex-start;background:var(--dark);color:white;padding:15px 21px;border-radius:999px;text-decoration:none;font-weight:800}
+.panel{margin:0 16px 16px;padding:34px 23px;border:1px solid var(--line);border-radius:26px;background:var(--paper)}.panel h2{font-size:27px;line-height:1.35;margin:8px 0 18px;letter-spacing:-.02em}.panel>p:not(.eyebrow){font-size:16px;line-height:1.9;color:#675f56}.story{font-size:19px!important;color:var(--ink)!important;font-weight:650}
+.grid{display:grid;gap:11px;margin-top:22px}.card{background:white;border:1px solid var(--line);border-radius:19px;padding:19px}.card b{color:var(--gold);font-size:12px}.card h3{margin:7px 0;font-size:18px}.card p{margin:0;color:var(--muted);line-height:1.7;font-size:15px}
+.routes{display:grid;gap:10px}.route{width:100%;border:1px solid var(--line);background:white;border-radius:18px;padding:18px;text-decoration:none;color:var(--ink);display:flex;justify-content:space-between;gap:14px;align-items:center;font:inherit}.route strong{font-size:16px}.route small{color:var(--gold);white-space:nowrap}.disabled{opacity:.58}.note{margin-top:15px;font-size:13px!important;line-height:1.7!important;color:#91877c!important}
+.manifesto{padding:52px 25px 58px}.manifesto p{color:var(--muted);line-height:1.8}.manifesto h2{font-size:30px;line-height:1.45;margin:8px 0}footer{padding:34px 25px 44px;background:var(--dark);color:white}footer strong{display:block;font-size:20px}footer span{display:block;color:#cfc4b8;margin-top:5px}footer p{color:#8f857b;font-size:11px;margin:28px 0 0}
+@media(max-width:430px){h1{font-size:38px}.hero{padding-top:46px}.panel{padding:30px 20px}.panel h2{font-size:25px}.route{flex-direction:column;align-items:flex-start;gap:6px}.manifesto h2{font-size:28px}}
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="hero card">
-      <div class="avatar">本</div>
-      <p class="eyebrow">WELCOME</p>
-      <h1>李本本｜上班族的自由生活實驗</h1>
-      <p class="lead">分享生活、好物、學習，以及一個普通上班族怎麼慢慢替自己增加選擇。</p>
-      <a class="btn primary" href="#links">先從這裡認識我</a>
-    </section>
+<main>
+<section class="hero">
+  <img class="avatar" src="benben-profile.jpg" alt="本本">
+  <p class="tag">HI, I’M BENBEN 👋</p>
+  <h1>上班族的<br><span>自由生活實驗</span></h1>
+  <p class="lead">生活沒有突然翻篇。<br>我只是開始在工作、家庭和日常裡，替自己多累積一點選擇。</p>
+  <a class="primary" href="#about">先認識本本 ↓</a>
+</section>
 
-    <section class="card">
-      <h2>我在做什麼？</h2>
-      <div class="grid">
-        <div class="item">
-          <h3>生活分享</h3>
-          <p>上班、育兒、消費、學習，還有那些很真實的小日常。</p>
-        </div>
-        <div class="item">
-          <h3>小本本選物</h3>
-          <p>不是看到便宜就推，而是幫你一起看適不適合、值不值得。</p>
-        </div>
-        <div class="item">
-          <h3>斜槓實驗</h3>
-          <p>記錄我怎麼從「不知道自己會什麼」，慢慢建立自己的第二條路。</p>
-        </div>
-      </div>
-    </section>
+<section class="panel" id="about">
+  <p class="eyebrow">ABOUT</p>
+  <h2>我不是什麼成功範本，<br>就是一個正在實驗的人。</h2>
+  <p class="story">有正職、有家庭、愛買東西，也想多賺一點，更想活得自由一點。</p>
+  <p>我從「我到底能提供什麼價值？」開始學 AI、做內容、經營購物群，也把自己真的用過、查過、比較過的東西分享出來。</p>
+  <p>這裡記錄的不是一步登天，是一個普通人怎麼慢慢替自己增加選擇。</p>
+</section>
 
-    <section class="card" id="links">
-      <h2>你今天想看哪一個？</h2>
-      <div class="links">
-        <a class="link-card" href="https://www.instagram.com/" target="_blank" rel="noopener">
-          <span>Instagram</span><small>追蹤我的日常與內容</small>
-        </a>
+<section class="panel">
+  <p class="eyebrow">WHAT YOU’LL FIND</p>
+  <h2>來這裡，可以看到這些</h2>
+  <div class="grid">
+    <div class="card"><b>01</b><h3>生活</h3><p>上班、育兒、花錢、變美，還有那些很真實的小日常。</p></div>
+    <div class="card"><b>02</b><h3>選物</h3><p>不只告訴你「這個很好」，而是一起看適不適合、值不值得。</p></div>
+    <div class="card"><b>03</b><h3>學習</h3><p>AI、自媒體、內容創作。新手怎麼邊做邊學，我就怎麼記。</p></div>
+    <div class="card"><b>04</b><h3>斜槓</h3><p>不講一夜翻身。分享我怎麼從沒有明顯專長，慢慢建立第二條路。</p></div>
+  </div>
+</section>
 
-        <a class="link-card" href="#" onclick="alert('之後把 LINE 群組／官方帳號連結貼在這裡'); return false;">
-          <span>加入小本本選物</span><small>好物推薦、比價、使用分享</small>
-        </a>
+<section class="panel">
+  <p class="eyebrow">START HERE</p>
+  <h2>你今天想從哪裡開始？</h2>
+  <div class="routes">
+    <a class="route" href="https://www.instagram.com/JINCA1027/" target="_blank" rel="noopener"><strong>看看本本的日常</strong><small>Instagram →</small></a>
+    <a class="route" href="https://line.me/R/ti/g/mtligQaPc9" target="_blank" rel="noopener"><strong>加入小本本選物</strong><small>LINE 購物群 →</small></a>
+    <a class="route" href="https://www.instagram.com/JINCA1027/" target="_blank" rel="noopener"><strong>商品／保健／保養想問我</strong><small>找本本聊聊 →</small></a>
+    <div class="route disabled"><strong>我想了解妳的斜槓方式</strong><small>故事頁下一版加入</small></div>
+    <a class="route" href="https://www.instagram.com/JINCA1027/" target="_blank" rel="noopener"><strong>品牌／業配合作</strong><small>Instagram 聯絡 →</small></a>
+  </div>
+  <p class="note">目前諮詢與合作先統一由 Instagram 聯絡，避免入口太多；之後有專用表單或合作信箱再替換。</p>
+</section>
 
-        <a class="link-card" href="#" onclick="alert('之後可改成 LINE、Messenger 或表單連結'); return false;">
-          <span>想聊聊合作／斜槓</span><small>先聊，不急著做決定</small>
-        </a>
-      </div>
-    </section>
+<section class="manifesto">
+  <p>我想要的自由，並不是什麼都不用做。</p>
+  <h2>是讓自己慢慢擁有<br>更多選擇的能力。</h2>
+</section>
 
-    <section class="card soft">
-      <h2>我比較在意的事</h2>
-      <p>我不想把這裡做成一張滿滿產品和招募話術的名片。希望你先知道我是誰、我怎麼想，再決定要不要繼續認識。</p>
-    </section>
-
-    <footer>
-      <p>© 2026 本本｜個人品牌頁</p>
-    </footer>
-  </main>
+<footer><strong>李本本</strong><span>上班族的自由生活實驗</span><p>© 2026 BENBEN</p></footer>
+</main>
 </body>
 </html>
