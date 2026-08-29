@@ -113,12 +113,45 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
 }
 </style>
 
+
+<style>
+/* V9 — 真正看得到的品牌識別＋手機互動 */
+.benben-symbol{position:relative;overflow:visible!important}
+.benben-symbol b,.benben-symbol i{font-style:normal;line-height:1}
+.benben-symbol i{position:absolute;font-size:.52em;right:-7px;bottom:-5px;background:#fff7e9;color:var(--caramel);
+ border:2px solid var(--caramel);width:20px;height:20px;display:grid;place-items:center;border-radius:50%;transform:rotate(9deg)}
+.ending-symbol i{width:27px;height:27px;right:-10px;bottom:-8px;background:#fffaf1}
+.benben-rail{position:fixed;right:8px;top:42%;z-index:30;display:flex;flex-direction:column;align-items:center;gap:6px;
+ opacity:.72;pointer-events:none}
+.rail-dot{width:5px;height:5px;border:1px solid #ad7a32;border-radius:50%;background:#f7f0e4;transition:.25s}
+.rail-dot.active{height:20px;border-radius:5px;background:#ad7a32}
+.benben-rail small{writing-mode:vertical-rl;font-size:8px;font-weight:900;letter-spacing:.12em;color:#9c743a;margin-top:3px}
+.tap-hint{font-size:11px;color:#a1783c;margin:0 8px 12px;font-weight:750}
+.life-tab{font-family:inherit;cursor:pointer;text-align:left;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+ -webkit-tap-highlight-color:transparent}
+.life-tab:active,.life-tab.is-active{transform:translateY(3px) rotate(-1deg)!important;box-shadow:0 1px 0 #d9cbb8!important;background:#fff8e9!important}
+.life-tab-note{margin:4px 8px 18px;min-height:50px;padding:13px 15px;border-left:4px solid var(--caramel);
+ background:#fff9ef;border-radius:4px 12px 12px 4px;color:#55483b;font-size:13px;line-height:1.55;
+ opacity:.82;transition:.2s ease}
+.life-tab-note.pop{animation:notePop .28s ease}
+@keyframes notePop{0%{transform:translateY(5px);opacity:.35}100%{transform:none;opacity:1}}
+.tiny-symbol{display:inline-grid;place-items:center;margin-right:10px;vertical-align:.18em;background:var(--caramel);color:white;
+ font-size:10px;letter-spacing:.05em;width:34px;height:24px;border-radius:7px 7px 7px 2px;transform:rotate(-3deg);
+ box-shadow:3px 3px 0 #d8c29f}
+@media(max-width:430px){.benben-rail{right:5px}.tap-hint{display:block}}
+</style>
+
 </head>
-<body><main>
+<body>
+<div class="benben-rail" aria-hidden="true">
+  <span class="rail-dot active"></span><span class="rail-dot"></span><span class="rail-dot"></span><span class="rail-dot"></span>
+  <small>本本<br>實驗中</small>
+</div>
+<main>
 <section class="hero">
   <div class="stamp">自由生活<br>實驗中<br>2026</div>
   <div class="photo-wrap"><div class="tape"></div><img class="photo" src="benben-profile.jpg" alt="本本"></div>
-  <div class="brandline"><span class="benmark">本</span><div class="kicker">嗨，我是李本本</div></div>
+  <div class="brandline"><span class="benmark benben-symbol"><b>本</b><i>本</i></span><div class="kicker">嗨，我是李本本</div></div>
   <h1>我沒有辭職。<br>但我開始替自己<br>準備<em>第二種人生</em>。</h1>
   <p class="hook">上班、養小孩、愛買東西、學 AI、做自媒體、經營購物群。</p>
   <p class="sub">我想實驗看看：一個普通上班族，能不能靠每天累積一點點，慢慢換回更多選擇？</p>
@@ -132,11 +165,11 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
     <h2>我的生活，本來就同時開著很多分頁。</h2>
     <p>沒有哪一個身份是全部的我，全部加起來才是。</p>
   </div>
-  <div class="desk-note">現在開著的 8 個分頁</div><div class="tabs">
-    <span class="pill">01 / 上班族</span><span class="pill">02 / 媽媽</span>
-    <span class="pill">03 / 愛買東西</span><span class="pill">04 / 想變漂亮</span>
-    <span class="pill">05 / 想多賺一點</span><span class="pill">06 / AI 新手</span>
-    <span class="pill">07 / 自媒體新手</span><span class="pill">08 / 偶爾很會拖延</span>
+  <div class="desk-note">現在開著的 8 個分頁</div><div class="tap-hint">點一下分頁，看看本本正在想什麼 ↘</div><div class="tabs">
+    <button class="pill life-tab" type="button" data-note="白天把工作做好，晚上替未來多走一步。">01 / 上班族</button><button class="pill life-tab" type="button" data-note="一邊養小孩，一邊也沒有忘記養自己。">02 / 媽媽</button>
+    <button class="pill life-tab" type="button" data-note="不是不買，是想把每一筆錢花得更值得。">03 / 愛買東西</button><button class="pill life-tab" type="button" data-note="變漂亮不是虛榮，是我照顧自己的一種方式。">04 / 想變漂亮</button>
+    <button class="pill life-tab" type="button" data-note="不是貪心，是想讓選擇多一點。">05 / 想多賺一點</button><button class="pill life-tab" type="button" data-note="從「這什麼？」一路玩到「原來我也可以」。">06 / AI 新手</button>
+    <button class="pill life-tab" type="button" data-note="先發出去，再慢慢找到自己的樣子。">07 / 自媒體新手</button><button class="pill life-tab" type="button" data-note="通常不是不想做，是太想一次做到好。">08 / 偶爾很會拖延</button>
   </div>
   <div class="statement">
     <strong>所以我決定，<br>不等「準備好了」才開始。</strong>
@@ -147,7 +180,7 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
 <section class="section lab" id="lab">
   <div class="section-title">
     <span class="eyebrow">本本實驗室</span>
-    <h2>今天想打開哪一頁？</h2>
+    <h2><span class="tiny-symbol">本本</span>今天想打開哪一頁？</h2>
     <p>四個方向，都是我現在真的在生活、學習和累積的事。</p>
   </div>
   <div class="lab-grid">
@@ -207,11 +240,35 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
 </section>
 
 <section class="quote brand-ending">
-  <div class="ending-mark">本</div>
+  <div class="ending-mark benben-symbol ending-symbol"><b>本</b><i>本</i></div>
   <p class="ending-small">BENBEN NOTE · 2026</p>
   <h2>我想要的自由，<br>不是什麼都不用做。</h2>
   <div class="handline">是讓自己慢慢擁有更多選擇。</div>
   <p class="sign">李本本｜自由生活實驗中</p>
 </section>
 <footer><strong>李本本</strong><span>上班族的自由生活實驗</span><p>© 2026 本本自由生活實驗室</p></footer>
-</main></body></html>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const tabs=[...document.querySelectorAll('.life-tab')];
+  const note=document.getElementById('life-tab-note');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      tabs.forEach(x=>x.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      if(note){
+        note.textContent=tab.dataset.note;
+        note.classList.remove('pop'); void note.offsetWidth; note.classList.add('pop');
+      }
+    });
+  });
+  const dots=[...document.querySelectorAll('.rail-dot')];
+  window.addEventListener('scroll',()=>{
+    const p=window.scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight);
+    const idx=Math.min(dots.length-1,Math.floor(p*dots.length));
+    dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
+  },{passive:true});
+});
+</script>
+
+</body></html>
