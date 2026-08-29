@@ -141,6 +141,62 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
 @media(max-width:430px){.benben-rail{right:5px}.tap-hint{display:block}}
 </style>
 
+
+<style>
+/* V10 fix — iPhone button default + real response panel */
+.life-tab{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  color:var(--ink)!important;
+  background:var(--paper)!important;
+  border:1px solid #d8c7ad!important;
+  text-decoration:none!important;
+  font:inherit!important;
+  font-weight:900!important;
+}
+.life-tab:nth-child(2),.life-tab:nth-child(6){background:#e7e9df!important}
+.life-tab:nth-child(3),.life-tab:nth-child(7){background:#eadbd5!important}
+.life-tab:nth-child(4),.life-tab:nth-child(8){background:#e9ddc5!important}
+.life-tab.is-active{
+  color:#7c5521!important;
+  background:#f4dfb8!important;
+  border-color:#b9853a!important;
+  box-shadow:0 2px 0 #d0b17b!important;
+}
+.life-tab-note{
+  display:block!important;
+  margin:10px 8px 22px!important;
+  padding:15px 16px 16px!important;
+  min-height:72px!important;
+  background:#fff8eb!important;
+  border:1px dashed #c9a56b!important;
+  border-left:5px solid var(--caramel)!important;
+  border-radius:6px 16px 16px 6px!important;
+  color:var(--ink)!important;
+  box-shadow:3px 4px 0 #eadbc3;
+}
+.life-tab-note .note-label{
+  display:block;
+  margin-bottom:7px;
+  color:var(--caramel);
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:.08em;
+}
+.life-tab-note p{
+  margin:0!important;
+  font-size:14px!important;
+  line-height:1.6!important;
+  font-weight:800!important;
+  color:#51483e!important;
+}
+.life-tab-note.pop{animation:notePopV10 .28s ease}
+@keyframes notePopV10{
+  0%{transform:translateY(7px) scale(.99);opacity:.45}
+  100%{transform:none;opacity:1}
+}
+</style>
+
 </head>
 <body>
 <div class="benben-rail" aria-hidden="true">
@@ -170,6 +226,10 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
     <button class="pill life-tab" type="button" data-note="不是不買，是想把每一筆錢花得更值得。">03 / 愛買東西</button><button class="pill life-tab" type="button" data-note="變漂亮不是虛榮，是我照顧自己的一種方式。">04 / 想變漂亮</button>
     <button class="pill life-tab" type="button" data-note="不是貪心，是想讓選擇多一點。">05 / 想多賺一點</button><button class="pill life-tab" type="button" data-note="從「這什麼？」一路玩到「原來我也可以」。">06 / AI 新手</button>
     <button class="pill life-tab" type="button" data-note="先發出去，再慢慢找到自己的樣子。">07 / 自媒體新手</button><button class="pill life-tab" type="button" data-note="通常不是不想做，是太想一次做到好。">08 / 偶爾很會拖延</button>
+  </div>
+  <div id="life-tab-note" class="life-tab-note" aria-live="polite">
+    <span class="note-label">本本的小內心</span>
+    <p>點一個分頁，我會在這裡冒出一句話。</p>
   </div>
   <div class="statement">
     <strong>所以我決定，<br>不等「準備好了」才開始。</strong>
@@ -250,24 +310,33 @@ footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong
 </main>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  const tabs=[...document.querySelectorAll('.life-tab')];
-  const note=document.getElementById('life-tab-note');
-  tabs.forEach(tab=>{
-    tab.addEventListener('click',()=>{
-      tabs.forEach(x=>x.classList.remove('is-active'));
+  const tabs = Array.from(document.querySelectorAll('.life-tab'));
+  const note = document.getElementById('life-tab-note');
+  const noteText = note ? note.querySelector('p') : null;
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('is-active'); });
       tab.classList.add('is-active');
-      if(note){
-        note.textContent=tab.dataset.note;
-        note.classList.remove('pop'); void note.offsetWidth; note.classList.add('pop');
+
+      if(noteText){
+        noteText.textContent = tab.getAttribute('data-note') || '';
+        note.classList.remove('pop');
+        void note.offsetWidth;
+        note.classList.add('pop');
       }
     });
   });
-  const dots=[...document.querySelectorAll('.rail-dot')];
-  window.addEventListener('scroll',()=>{
-    const p=window.scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight);
-    const idx=Math.min(dots.length-1,Math.floor(p*dots.length));
-    dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
-  },{passive:true});
+
+  const dots = Array.from(document.querySelectorAll('.rail-dot'));
+  function updateRail(){
+    const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const p = window.scrollY / max;
+    const idx = Math.min(dots.length - 1, Math.floor(p * dots.length));
+    dots.forEach(function(d,i){ d.classList.toggle('active', i === idx); });
+  }
+  updateRail();
+  window.addEventListener('scroll', updateRail, {passive:true});
 });
 </script>
 
