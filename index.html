@@ -1,57 +1,132 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f6f0e7">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F5EFE3">
 <title>李本本｜上班族的自由生活實驗</title>
-<meta name="description" content="生活、選物、學習、斜槓。記錄一個普通上班族，怎麼慢慢替自己增加選擇。">
+<meta name="description" content="上班、家庭、選物、AI、自媒體與斜槓。李本本的自由生活實驗室。">
 <style>
-:root{--bg:#f6f0e7;--paper:#fffaf4;--ink:#292521;--muted:#756c62;--gold:#a87925;--line:#e9ddcd;--dark:#302a25}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}main{max-width:720px;margin:auto}
-.hero{padding:38px 24px 42px;min-height:72svh;display:flex;flex-direction:column;justify-content:center}.avatar{width:138px;height:138px;border-radius:50%;object-fit:cover;object-position:center 42%;border:5px solid #fff;box-shadow:0 14px 34px #4b3d2d24;margin-bottom:20px}
-.tag,.eyebrow{font-size:13px;letter-spacing:.08em;font-weight:800;color:var(--gold);margin:0}h1{font-size:42px;line-height:1.12;letter-spacing:-.04em;margin:8px 0 16px}h1 span{color:var(--gold)}.lead{font-size:17px;line-height:1.8;color:var(--muted);margin:0 0 22px}.primary{align-self:flex-start;background:var(--dark);color:#fff;padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:800}
-.panel{margin:0 16px 16px;padding:31px 23px;border:1px solid var(--line);border-radius:26px;background:var(--paper)}.panel h2{font-size:27px;line-height:1.35;margin:8px 0 17px;letter-spacing:-.02em}.panel>p:not(.eyebrow){font-size:16px;line-height:1.82;color:#675f56}.story{font-size:18px!important;color:var(--ink)!important;font-weight:650}
-.grid{display:grid;gap:11px;margin-top:20px}.card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:18px}.card b{color:var(--gold);font-size:12px}.card h3{margin:6px 0;font-size:18px}.card p{margin:0;color:var(--muted);line-height:1.65;font-size:15px}
-.routes{display:grid;gap:10px}.route{width:100%;border:1px solid var(--line);background:#fff;border-radius:18px;padding:18px;text-decoration:none;color:var(--ink);display:flex;justify-content:space-between;gap:14px;align-items:center}.route strong{font-size:16px}.route small{color:var(--gold);white-space:nowrap}
-.manifesto{padding:45px 25px 52px}.manifesto p{color:var(--muted);line-height:1.8}.manifesto h2{font-size:30px;line-height:1.45;margin:8px 0}footer{padding:34px 25px 44px;background:var(--dark);color:#fff}footer strong{display:block;font-size:20px}footer span{display:block;color:#cfc4b8;margin-top:5px}footer p{color:#8f857b;font-size:11px;margin:28px 0 0}
-@media(max-width:430px){h1{font-size:38px}.hero{padding-top:32px}.panel{padding:28px 20px}.panel h2{font-size:25px}.route{flex-direction:column;align-items:flex-start;gap:6px}.manifesto h2{font-size:28px}}
-</style></head>
+:root{
+ --cream:#F5EFE3;--paper:#FFF9F0;--oat:#E8D9C4;--caramel:#A96F21;
+ --coffee:#2C241F;--muted:#71675D;--sage:#A7AD92;--blush:#D9B4A3;
+ --line:#DED0BD;--white:#FFFCF7;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--coffee);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#6e5d4c 0.45px,transparent 0.45px);background-size:8px 8px}
+main{max-width:720px;margin:auto;overflow:hidden;position:relative}
+.hero{min-height:94svh;padding:34px 24px 42px;position:relative;display:flex;flex-direction:column;justify-content:center}
+.hero:before{content:"BENBEN LAB";position:absolute;right:-36px;top:86px;font-size:78px;font-weight:900;letter-spacing:-.06em;color:#EBDDCA;transform:rotate(90deg);opacity:.62}
+.stamp{position:absolute;right:22px;top:34px;width:82px;height:82px;border:1.5px solid var(--caramel);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--caramel);font-size:10px;font-weight:900;letter-spacing:.08em;transform:rotate(8deg)}
+.photo-wrap{position:relative;width:168px;margin-bottom:24px}
+.photo{width:158px;height:158px;border-radius:42% 58% 53% 47%/48% 42% 58% 52%;object-fit:cover;object-position:center 42%;border:6px solid var(--white);box-shadow:0 20px 40px #55402a25;transform:rotate(-2deg)}
+.tape{position:absolute;width:67px;height:20px;background:#d9c49eaa;top:-5px;left:48px;transform:rotate(5deg);backdrop-filter:blur(1px)}
+.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--caramel);font-weight:900;font-size:14px;letter-spacing:.05em}
+.kicker:before{content:"✦";font-size:13px}
+h1{font-size:46px;line-height:1.03;letter-spacing:-.055em;margin:13px 0 19px;max-width:580px}
+h1 em{font-style:normal;color:var(--caramel);position:relative}
+h1 em:after{content:"";position:absolute;height:8px;left:0;right:0;bottom:1px;background:#d9b36d55;z-index:-1;border-radius:50%}
+.hook{font-size:19px;line-height:1.75;font-weight:650;max-width:560px;margin:0 0 10px}
+.sub{font-size:15px;line-height:1.8;color:var(--muted);max-width:560px;margin:0 0 25px}
+.cta{display:inline-flex;align-self:flex-start;background:var(--coffee);color:white;text-decoration:none;padding:15px 21px;border-radius:999px;font-weight:850;box-shadow:4px 5px 0 var(--sage)}
+.micro{font-size:11px;color:#9a8c7e;margin-top:13px;letter-spacing:.05em}
+.section{padding:50px 18px}
+.section-title{padding:0 8px 22px}.eyebrow{font-size:12px;color:var(--caramel);font-weight:900;letter-spacing:.12em}.section h2{font-size:32px;line-height:1.3;letter-spacing:-.035em;margin:7px 0 9px}.section-title p{color:var(--muted);line-height:1.7;margin:0}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;padding:4px 8px 0}.pill{padding:11px 14px;border-radius:999px;background:var(--white);border:1px solid var(--line);font-size:14px;font-weight:750;box-shadow:2px 3px 0 #dfd1bf}
+.pill:nth-child(3n+1){transform:rotate(-1deg)}.pill:nth-child(3n+2){transform:rotate(1deg)}
+.statement{margin:22px 8px 0;padding:23px;border:1px solid var(--line);background:var(--paper);border-radius:22px;position:relative}
+.statement:before{content:"NOTE";position:absolute;right:17px;top:-10px;background:var(--blush);padding:5px 9px;font-size:10px;font-weight:900;transform:rotate(3deg)}
+.statement strong{font-size:22px;line-height:1.5}.statement p{color:var(--muted);line-height:1.75;margin-bottom:0}
+.lab{background:#EDE3D4;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 8px}
+.lab-card{min-height:205px;padding:20px;border-radius:23px;border:1px solid #d8c8b3;background:var(--paper);text-decoration:none;color:var(--coffee);position:relative;overflow:hidden}
+.lab-card:nth-child(2){background:#E5E6D8}.lab-card:nth-child(3){background:#F0DDD3}.lab-card:nth-child(4){background:#E7D6BC}
+.no{font-size:12px;color:var(--caramel);font-weight:900}.lab-card h3{font-size:22px;line-height:1.3;margin:13px 0 8px}.lab-card p{font-size:14px;color:var(--muted);line-height:1.65;margin:0}.arrow{position:absolute;right:17px;bottom:14px;font-size:23px}
+.progress{padding:0 8px;display:grid;gap:12px}.prog{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px}.prog-top{display:flex;justify-content:space-between;gap:15px;font-size:14px;font-weight:800}.prog-top span:last-child{color:var(--caramel);font-size:12px}.bar{height:8px;background:#e4d9ca;border-radius:999px;margin-top:11px;overflow:hidden}.bar i{display:block;height:100%;background:var(--coffee);border-radius:999px}.prog:nth-child(2) .bar i{background:var(--sage)}.prog:nth-child(3) .bar i{background:var(--blush)}.prog:nth-child(4) .bar i{background:var(--caramel)}
+.start{padding:50px 18px 58px}.start-box{background:var(--coffee);color:white;border-radius:30px;padding:29px 23px;box-shadow:8px 9px 0 var(--oat)}.start-box .eyebrow{color:#dcb77e}.start-box h2{font-size:30px;line-height:1.35;margin:7px 0 20px}.links{display:grid;gap:10px}.link{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;color:var(--coffee);padding:16px 17px;border-radius:17px;text-decoration:none;font-weight:850}.link small{color:var(--caramel)}
+.quote{padding:65px 25px;background:var(--paper);text-align:center}.quote .mark{font-size:50px;color:var(--oat);line-height:.5}.quote h2{font-size:30px;line-height:1.5;margin:16px 0}.quote p{color:var(--muted)}
+footer{padding:34px 25px 45px;background:var(--coffee);color:white}footer strong{font-size:20px}footer span{display:block;color:#cbbfb3;margin-top:5px;font-size:14px}footer p{font-size:11px;color:#82776e;margin-top:26px}
+@media(max-width:430px){h1{font-size:43px}.hero{padding-top:26px}.stamp{width:70px;height:70px}.hero:before{font-size:66px;right:-42px}.lab-card{min-height:220px;padding:18px}.lab-card h3{font-size:20px}}
+</style>
+</head>
 <body><main>
 <section class="hero">
-<img class="avatar" src="benben-profile.jpg" alt="本本">
-<p class="tag">嗨，我是本本 👋</p>
-<h1>上班族的<br><span>自由生活實驗</span></h1>
-<p class="lead">我沒有突然換一種人生。<br>只是開始在工作、家庭和日常裡，替自己多累積一點選擇。</p>
-<a class="primary" href="#about">先認識本本 ↓</a>
+  <div class="stamp">自由生活<br>實驗中<br>2026</div>
+  <div class="photo-wrap"><div class="tape"></div><img class="photo" src="benben-profile.jpg" alt="本本"></div>
+  <div class="kicker">嗨，我是李本本</div>
+  <h1>我沒有辭職。<br>但我開始替自己<br>準備<em>第二種人生</em>。</h1>
+  <p class="hook">上班、養小孩、愛買東西、學 AI、做自媒體、經營購物群。</p>
+  <p class="sub">我想實驗看看：一個普通上班族，能不能靠每天累積一點點，慢慢換回更多選擇？</p>
+  <a class="cta" href="#lab">進入本本實驗室 ↓</a>
+  <div class="micro">NO PERFECT PLAN · JUST KEEP EXPERIMENTING</div>
 </section>
 
-<section class="panel" id="about">
-<p class="eyebrow">關於本本</p>
-<h2>一邊上班，一邊把想要的生活慢慢做出來。</h2>
-<p class="story">有正職、有家庭、愛買東西，也想多賺一點，更想活得自由一點。</p>
-<p>所以我開始學 AI、做內容、經營購物群，把自己真的用過、查過、比較過的東西分享出來。</p>
-<p>這裡沒有「我已經成功了」的故事，只有我正在做的生活實驗。</p>
+<section class="section">
+  <div class="section-title">
+    <span class="eyebrow">MY OPEN TABS</span>
+    <h2>我的生活，本來就同時開著很多分頁。</h2>
+    <p>沒有哪一個身份是全部的我，全部加起來才是。</p>
+  </div>
+  <div class="tabs">
+    <span class="pill">💼 上班族</span><span class="pill">👩‍👧‍👦 媽媽</span>
+    <span class="pill">🛒 愛買東西</span><span class="pill">✨ 想變漂亮</span>
+    <span class="pill">💰 想多賺一點</span><span class="pill">🤖 AI 新手</span>
+    <span class="pill">📱 自媒體新手</span><span class="pill">😆 偶爾很會拖延</span>
+  </div>
+  <div class="statement">
+    <strong>所以我決定，<br>不等「準備好了」才開始。</strong>
+    <p>這個網站，就是我的生活實驗紀錄。</p>
+  </div>
 </section>
 
-<section class="panel">
-<p class="eyebrow">我在分享什麼</p><h2>來這裡，可以看到這些</h2>
-<div class="grid">
-<div class="card"><b>01</b><h3>生活</h3><p>上班、育兒、花錢、變美，還有那些很真實的小日常。</p></div>
-<div class="card"><b>02</b><h3>選物</h3><p>不只說「這個很好」，而是一起看適不適合、值不值得。</p></div>
-<div class="card"><b>03</b><h3>學習</h3><p>AI、自媒體、內容創作。新手怎麼邊做邊學，我就怎麼記。</p></div>
-<div class="card"><b>04</b><h3>斜槓</h3><p>不講一夜翻身，記錄我怎麼慢慢替自己建立第二條路。</p></div>
-</div></section>
+<section class="section lab" id="lab">
+  <div class="section-title">
+    <span class="eyebrow">BENBEN LAB</span>
+    <h2>今天想逛哪間實驗室？</h2>
+    <p>不是分類而已，每一間都是我正在真的做的事。</p>
+  </div>
+  <div class="lab-grid">
+    <a class="lab-card" href="https://www.instagram.com/JINCA1027/" target="_blank"><span class="no">LAB 01</span><h3>生活<br>實驗室</h3><p>上班、育兒、變美，還有那些很真實的小日常。</p><span class="arrow">↗</span></a>
+    <a class="lab-card" href="select.html"><span class="no">LAB 02</span><h3>選物<br>實驗室</h3><p>愛花錢沒關係，我們一起把錢花得聰明一點。</p><span class="arrow">→</span></a>
+    <a class="lab-card" href="https://www.instagram.com/JINCA1027/" target="_blank"><span class="no">LAB 03</span><h3>成長<br>實驗室</h3><p>AI、自媒體、學習與拖延，從完全不會開始。</p><span class="arrow">↗</span></a>
+    <a class="lab-card" href="sidehustle.html"><span class="no">LAB 04</span><h3>收入<br>實驗室</h3><p>沒有特殊專長，也替自己慢慢建立第二條路。</p><span class="arrow">→</span></a>
+  </div>
+</section>
 
-<section class="panel">
-<p class="eyebrow">從這裡開始</p><h2>你今天想看哪一個？</h2>
-<div class="routes">
-<a class="route" href="https://www.instagram.com/JINCA1027/" target="_blank"><strong>看看本本的日常</strong><small>Instagram →</small></a>
-<a class="route" href="select.html"><strong>逛逛小本本選物</strong><small>先看看這裡有什麼 →</small></a>
-<a class="route" href="sidehustle.html"><strong>我想了解妳怎麼做斜槓</strong><small>看我的故事 →</small></a>
-<a class="route" href="https://www.instagram.com/JINCA1027/" target="_blank"><strong>商品／保健／保養想問我</strong><small>IG 找本本 →</small></a>
-<a class="route" href="https://www.instagram.com/JINCA1027/" target="_blank"><strong>品牌／業配合作</strong><small>IG 聯絡 →</small></a>
-</div></section>
+<section class="section">
+  <div class="section-title">
+    <span class="eyebrow">EXPERIMENT STATUS</span>
+    <h2>本本目前實驗進度</h2>
+    <p>不是人生 KPI，是提醒自己：我真的有在往前。</p>
+  </div>
+  <div class="progress">
+    <div class="prog"><div class="prog-top"><span>正職上班</span><span>持續運作 ✓</span></div><div class="bar"><i style="width:100%"></i></div></div>
+    <div class="prog"><div class="prog-top"><span>媽媽模式</span><span>長期專案 ✓</span></div><div class="bar"><i style="width:100%"></i></div></div>
+    <div class="prog"><div class="prog-top"><span>自媒體養成</span><span>進行中</span></div><div class="bar"><i style="width:63%"></i></div></div>
+    <div class="prog"><div class="prog-top"><span>AI 技能解鎖</span><span>進行中</span></div><div class="bar"><i style="width:55%"></i></div></div>
+    <div class="prog"><div class="prog-top"><span>自由生活</span><span>持續實驗中…</span></div><div class="bar"><i style="width:48%"></i></div></div>
+  </div>
+</section>
 
-<section class="manifesto"><p>我想要的自由，不是什麼都不用做。</p><h2>是讓自己慢慢擁有<br>更多選擇的能力。</h2></section>
-<footer><strong>李本本</strong><span>上班族的自由生活實驗</span><p>© 2026 BENBEN</p></footer>
+<section class="start">
+  <div class="start-box">
+    <span class="eyebrow">START HERE</span>
+    <h2>如果你也是邊生活，<br>邊想替自己多一點選擇。</h2>
+    <div class="links">
+      <a class="link" href="https://www.instagram.com/JINCA1027/" target="_blank"><span>先看看本本的日常</span><small>IG ↗</small></a>
+      <a class="link" href="select.html"><span>逛逛小本本選物</span><small>選物 →</small></a>
+      <a class="link" href="sidehustle.html"><span>看看我的斜槓實驗</span><small>故事 →</small></a>
+      <a class="link" href="https://www.instagram.com/JINCA1027/" target="_blank"><span>商品諮詢／品牌合作</span><small>找本本 ↗</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="mark">“</div>
+  <h2>我想要的自由，<br>不是什麼都不用做。<br><span style="color:var(--caramel)">是讓自己慢慢擁有更多選擇。</span></h2>
+  <p>— 李本本的自由生活實驗</p>
+</section>
+<footer><strong>李本本</strong><span>上班族的自由生活實驗</span><p>© 2026 BENBEN LAB</p></footer>
 </main></body></html>
